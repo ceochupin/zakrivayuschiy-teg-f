@@ -15,6 +15,157 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
+  max-inline-size: 700px;
   min-block-size: 100dvb;
+  font-family: var(--font-main, sans-serif);
+  font-size: 18px;
+  line-height: 1.16667;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+  color: var(--color-accent);
+  font-variation-settings:
+    'wght' var(--font-w-text),
+    'wdth' 100,
+    'opsz' 0;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 25px;
+  padding-block: 25px;
+  margin-block: 100px;
+  min-block-size: 327px;
+  border: 2px solid currentColor;
+}
+
+.header__title {
+  text-align: center;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: var(--font-w-text);
+  text-transform: uppercase;
+}
+
+.header__title-accent {
+  font-size: 49px;
+  display: block;
+  margin-block-end: 20px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 0 20px;
+  text-align: left;
+}
+
+.theme-menu__item {
+  line-height: 0;
+}
+
+.theme-menu__button {
+  border: none;
+  color: inherit;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: var(--font-w-text);
+  text-transform: uppercase;
+  appearance: none;
+}
+
+.theme-menu__button:disabled {
+  position: relative;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -19px;
+}
+
+/* карточка */
+
+.card {
+  border-inline: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+}
+
+.card__title {
+  border-block-start: 2px solid currentColor;
+  padding-inline: 10px;
+  padding-block: 4px;
+  font-size: inherit;
+  font-variation-settings:
+    'wght' var(--font-w-title),
+    'wdth' inherit,
+    'opsz' inherit;
+}
+
+.card__image-container {
+  position: relative;
+  border-block-start: 2px solid currentColor;
+}
+
+.card__tag {
+  position: absolute;
+
+  /* динамическое выравнивание тэга от мобилки к десктопу */
+  inset-inline-end: clamp(13px, -0.8464px + 3.6923vw, 25px);
+
+  inset-block-start: 25px;
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+}
+
+.card__body {
+  display: grid;
+  gap: 25px;
+  padding: 25px;
+  border-block-start: 2px solid currentColor;
+}
+
+.card__text-container {
+  display: grid;
+  gap: 27px;
+}
+
+.card__text {}
+
+.card__button-container {
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  gap: 12px;
+}
+
+.card__icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.like-icon {}
+
+.card__like-button {}
+
+.button__text {}

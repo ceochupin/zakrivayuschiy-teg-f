@@ -2,18 +2,32 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
+    <meta name="color-scheme" content="light dark" />
+
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <!-- <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" /> -->
+
     <script src="./scripts/set-theme.js"></script>
+
+    <title>Закрывающий тег</title>
   </head>
+
   <body class="page">
     <header class="header">
+      <h1 class="header__title">
+        <span class="header__title-accent" aria-hidden="true">&lt;/html&gt;</span>Закрывающий тег
+      </h1>
+
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -22,6 +36,7 @@
               Темно
             </button>
           </li>
+
           <li class="theme-menu__item">
             <button
               type="button"
@@ -32,6 +47,7 @@
               Авто
             </button>
           </li>
+
           <li class="theme-menu__item">
             <button type="button" data-theme="light" class="theme-menu__button">
               Светло
@@ -40,7 +56,44 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+
+    <main class="content">
+      <section class="cards content__cards">
+        <article class="card">
+          <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+
+          <div class="card__image-container">
+            <span class="card__tag">&lt;/HTML&gt;</span>
+
+            <img class="card__image" src="./images/image.png" alt="Какой-то alt-тэг">
+          </div>
+
+          <div class="card__body">
+            <div class="card__text-container">
+              <p class="card__text">
+                Это было самое начало пути. На этом этапе важно было
+                проникнуться основами и настроиться на учёбу. И, возможно,
+                подумать, как новые знания могут повлиять на ваше будущее.
+              </p>
+
+              <p class="card__text">
+                Место для ваших воспоминаний о начале обучения.
+              </p>
+            </div>
+            <div class="card__button-container">
+              <button class="card__icon-button">❤️</button>
+
+              <button class="card__like-button"><span class="button__text">Like</span></button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <dialog></dialog>
+
     <script src="./scripts/like.js"></script>
   </body>
 </html>

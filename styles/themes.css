@@ -4,3 +4,47 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+.theme-light {
+  /* шрифтовое семейство */
+  --font-main: 'Inter-Variable';
+  --font-accent: 'PressStart2P';
+
+  /* вес шрифта */
+  --font-w-title: 700;
+  --font-w-text: 400;
+
+  /* цвет */
+  --color-bg: oklch(100% 0 102.07);
+  --color-accent: oklch(0% 0 0);
+}
+
+.theme-dark {
+  /* шрифтовое семейство */
+  --font-main: 'Inter-Variable';
+  --font-accent: 'PressStart2P';
+
+  /* вес шрифта */
+  --font-w-title: 785;
+  --font-w-text: 465;
+
+  /* цвет */
+  --color-bg: oklch(0% 0 0);
+  --color-accent: oklch(73.27% 0.246 142.92);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* шрифтовое семейство */
+    --font-main: 'Inter-Variable';
+    --font-accent: 'PressStart2P';
+  
+    /* вес шрифта */
+    --font-w-title: 785;
+    --font-w-text: 465;
+  
+    /* цвет */
+    --color-bg: oklch(100% 0 102.07);
+    --color-accent: oklch(0% 0 0);
+  }
+}
