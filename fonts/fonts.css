@@ -4,7 +4,7 @@
     local('PressStart2P'),
     url('./PressStart2P-Regular.woff') format('woff');
   font-display: swap;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @font-face {

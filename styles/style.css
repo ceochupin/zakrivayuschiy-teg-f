@@ -15,19 +15,19 @@
 */
 
 .page {
-  min-inline-size: 375px;
+  min-inline-size: 320px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
   font-family: var(--font-main, sans-serif);
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: calc(21 / 18);
   margin: 0 auto;
   background-color: var(--color-bg);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
   color: var(--color-accent);
-  font-variation-settings:
-    'wght' var(--font-w-text),
-    'wdth' 100,
-    'opsz' 0;
+  font-variation-settings: 'wght' var(--font-w-text);
 }
 
 .header {
@@ -39,6 +39,7 @@
   padding-block: 25px;
   margin-block: 100px;
   min-block-size: 327px;
+  background-color: inherit;
   border: 2px solid currentColor;
 }
 
@@ -81,9 +82,43 @@
   font-weight: var(--font-w-text);
   text-transform: uppercase;
   appearance: none;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--color-accent);
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: top left;
+  block-size: 2px;
+  inline-size: 100%;
+  inset-block-end: -3px;
+  inset-inline-start: 0;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .theme-menu__button:disabled {
+  opacity: 0.6;
   position: relative;
   pointer-events: none;
 }
@@ -91,7 +126,7 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  inset-inline-start: -19px;
+  inset-inline-start: -20px;
 }
 
 /* карточка */
@@ -99,6 +134,7 @@
 .card {
   border-inline: 2px solid currentColor;
   border-block-end: 2px solid currentColor;
+  background-color: var(--color-bg);
 }
 
 .card__title {
@@ -154,18 +190,136 @@
   display: flex;
   justify-content: end;
   align-content: center;
-  gap: 12px;
+  gap: 5px;
 }
 
+/* кнопка с иконкой */
 .card__icon-button {
-  border: none;
+  display: grid;
+  place-items: center;
+  min-inline-size: 38px;
+  block-size: 38px;
+  border: 2px solid transparent;
   background: transparent;
   cursor: pointer;
   appearance: none;
+  transition: border 0.3s ease;
 }
 
-.like-icon {}
+.card__icon-button:focus {
+  outline: none;
+}
 
-.card__like-button {}
+.card__icon-button:focus-visible {
+  border: 2px solid currentColor;
+}
 
-.button__text {}
+/* анимация заливки иконки по дефолту */
+.like-icon .core {
+  fill: var(--color-bg);
+  transition: fill 0.3s 0.03s ease;
+}
+
+.like-icon .main-body {
+  fill: var(--color-bg);
+  transition: fill 0.3s ease;
+}
+
+/* анимация заливки иконки при hover */
+.like-icon:hover .core {
+  fill: var(--color-accent);
+  transition: fill 0.3s ease;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-accent);
+  transition: fill 0.3s 0.05s ease;
+}
+
+/* анимация заливки иконки при active */
+.like-icon:active .core {
+  fill: var(--color-heart-fill);
+  transition: fill 0.3s ease;
+}
+
+.like-icon:active .main-body {
+  fill: var(--color-heart-fill);
+  transition: fill 0.3s 0.05s ease;
+}
+
+/* анимация лайка иконки */
+.like-icon.is-liked .core {
+  fill: var(--color-heart-fill);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-heart-fill);
+  transition: fill 0.3s 0.05s ease;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-heart-fill);
+  transition: fill 0.3s 0.06s ease;
+}
+
+/* анимация дефолтного состояния контура */
+.like-icon .contour {
+  fill: var(--color-accent);
+  transition: fill 0.1s linear;
+}
+
+/* скрываем искры */
+.sparks {
+  opacity: 0;
+}
+
+.card__like-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-inline-size: 130px;
+  block-size: 38px;
+  border: 2px solid currentColor;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: var(--color-accent);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  block-size: 100%;
+  inline-size: 100%;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
+}
+
+.button__text {
+  position: absolute;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 0.9;
+  font-weight: inherit;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  color: var(--color-button-text);
+  z-index: 1;
+}

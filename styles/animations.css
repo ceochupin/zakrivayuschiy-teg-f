@@ -12,3 +12,52 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* анимация стрелки пункта меню */
+.theme-menu__button:disabled::before {
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  from {
+    inset-inline-start: -20px;
+  }
+
+  to {
+    inset-inline-start: -16px;
+  }
+}
+
+/* анимация увеличения сердца */
+.like-icon.is-liked .heart {
+  animation: heart 0.15s ease-in 0.1s 2 alternate;
+}
+
+@keyframes heart {
+  from {
+    /* transform: scale(1); */
+    scale: 1;
+    transform-origin: center;
+  }
+
+  to {
+    /* transform: scale(1.5); */
+    scale: 1.5;
+    transform-origin: center;
+  }
+}
+
+/* анимация появления искр */
+.like-icon.is-liked .sparks {
+  animation: sparks 0.15s ease-in 0.3s 2 alternate;
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

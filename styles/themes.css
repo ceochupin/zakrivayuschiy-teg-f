@@ -5,46 +5,133 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.theme-light {
-  /* шрифтовое семейство */
+:root.theme-light {
+  /* #ШРИФТОВОЕ СЕМЕЙСТВО */
   --font-main: 'Inter-Variable';
   --font-accent: 'PressStart2P';
 
-  /* вес шрифта */
+  /* #ВЕС ШРИФТА */
   --font-w-title: 700;
   --font-w-text: 400;
 
-  /* цвет */
+  /* #ЦВЕТ */
+  /* основные */
   --color-bg: oklch(100% 0 102.07);
   --color-accent: oklch(0% 0 0);
+  --color-heart-fill: oklch(62.8% 0.258 29.24);
+  --color-button-text: var(--color-bg);
+
+  /* цвет линний градиента */
+  --gr-line-first: oklch(86.69% 0 0);
+  --gr-line-second: oklch(86.69% 0 0 / 0%);
+
+  /* цвет сплошного градиента */
+  --gr-solid-start: oklch(92.8% 0 0);
+  --gr-solid-end: oklch(21.78% 0 0);
+
+  /* паттерн фонового градиента */
+  --bg-image: 
+    repeating-linear-gradient(
+      to right,
+      var(--gr-line-first) 0 2px,
+      var(--gr-line-second) 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--gr-line-first) 0 2px,
+      var(--gr-line-second) 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gr-solid-start) 0.01%,
+      var(--gr-solid-end)
+    );
 }
 
-.theme-dark {
-  /* шрифтовое семейство */
+:root.theme-dark {
+  /* #ШРИФТОВОЕ СЕМЕЙСТВО */
   --font-main: 'Inter-Variable';
   --font-accent: 'PressStart2P';
 
-  /* вес шрифта */
+  /* #ВЕС ШРИФТА */
   --font-w-title: 785;
   --font-w-text: 465;
 
-  /* цвет */
+  /* #ЦВЕТ */
+  /* основные */
   --color-bg: oklch(0% 0 0);
   --color-accent: oklch(73.27% 0.246 142.92);
+  --color-heart-fill: oklch(62.8% 0.258 29.24);
+  --color-button-text: var(--color-accent);
+
+  /* цвет линний градиента */
+  --gr-line-first: oklch(0% 0 0);
+  --gr-line-second: oklch(0% 0 0 / 0%);
+
+  /* цвет сплошного градиента */
+  --gr-solid-start: oklch(51.72% 0.172 143.13);
+  --gr-solid-end: oklch(33.23% 0.109 143.69);
+
+  /* паттерн фонового градиента */
+  --bg-image: 
+    repeating-linear-gradient(
+      to right,
+      var(--gr-line-first) 0 2px,
+      var(--gr-line-second) 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--gr-line-first) 0 2px,
+      var(--gr-line-second) 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gr-solid-start),
+      var(--gr-solid-end)
+    );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* шрифтовое семейство */
+    /* #ШРИФТОВОЕ СЕМЕЙСТВО */
     --font-main: 'Inter-Variable';
     --font-accent: 'PressStart2P';
-  
-    /* вес шрифта */
+
+    /* #ВЕС ШРИФТА */
     --font-w-title: 785;
     --font-w-text: 465;
-  
-    /* цвет */
-    --color-bg: oklch(100% 0 102.07);
-    --color-accent: oklch(0% 0 0);
+
+    /* #ЦВЕТ */
+    /* основные */
+    --color-bg: oklch(0% 0 0);
+    --color-accent: oklch(73.27% 0.246 142.92);
+    --color-heart-fill: oklch(62.8% 0.258 29.24);
+    --color-button-text: var(--color-accent);
+
+    /* цвет линний градиента */
+    --gr-line-first: oklch(0% 0 0);
+    --gr-line-second: oklch(0% 0 0 / 0%);
+
+    /* цвет сплошного градиента */
+    --gr-solid-start: oklch(51.72% 0.172 143.13);
+    --gr-solid-end: oklch(33.23% 0.109 143.69);
+
+    /* паттерн фонового градиента */
+    --bg-image: 
+      repeating-linear-gradient(
+        to right,
+        var(--gr-line-first) 0 2px,
+        var(--gr-line-second) 2px 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--gr-line-first) 0 2px,
+        var(--gr-line-second) 2px 4px
+      ),
+      linear-gradient(
+        to bottom,
+        var(--gr-solid-start),
+        var(--gr-solid-end)
+      );
   }
 }
