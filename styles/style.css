@@ -380,29 +380,27 @@
   mix-blend-mode: difference;
 }
 
-/* кнопка сохранения осле карточек */
+/* кнопка сохранения после карточек */
 .content__save-button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding-block: 15px;
-  inline-size: clamp(19.125rem, 17.0337rem + 8.9231vw, 20.9375rem);
+  padding-inline: 19px;
+  /* inline-size: clamp(19.125rem, 17.0337rem + 8.9231vw, 20.9375rem); */
 }
 
 @media (width <= 375px) {
   .content__save-button {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
   }
 }
 
 /* стили для иконки в виде дискеты */
 .floppy-icon {
   z-index: 1;
-  display: block;
+  display: inline-block;
   color: var(--color-button-text);
   mix-blend-mode: difference;
 }
