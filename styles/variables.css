@@ -1,22 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* ОБЩИЕ ПЕРЕМЕННЫЕ */
 
+  /* ширина контейнера */
   --content-inline-size: min(100%, 700px);
 
+  /* шрифты проекта */
+  --font-main: "Inter-Variable";
+  --font-accent: "PressStart2P";
 
-  /* #ШРИФТОВОЕ СЕМЕЙСТВО */
-  --font-main: 'Inter-Variable';
-  --font-accent: 'PressStart2P';
+  /* цвет сердца */
+  --color-heart-fill: oklch(62.8% 0.258 29.24);
 
-  /* #ВЕС ШРИФТА */
+  /* ПЕРЕМЕННЫЕ ТЕМЫ */
+
+  /* вес шрифта */
   --font-w-normal: 400;
   --font-w-bold: 700;
 
-  /* #ЦВЕТ */
-  /* основные */
+  /* основные цвета */
   --color-bg: oklch(100% 0 102.07);
   --color-accent: oklch(0% 0 0);
-  --color-heart-fill: oklch(62.8% 0.258 29.24);
   --color-button-text: var(--color-bg);
 
   /* цвет линний градиента */
@@ -28,8 +32,7 @@
   --gr-solid-end: oklch(21.78% 0 0);
 
   /* паттерн фонового градиента */
-  --image-bg: 
-    repeating-linear-gradient(
+  --image-bg: repeating-linear-gradient(
       to right,
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
@@ -39,9 +42,5 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    linear-gradient(
-      to bottom,
-      var(--gr-solid-start) 0.01%,
-      var(--gr-solid-end)
-    );
+    linear-gradient(to bottom, var(--gr-solid-start) 0.01%, var(--gr-solid-end));
 }
