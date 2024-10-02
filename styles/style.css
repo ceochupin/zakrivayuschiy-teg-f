@@ -84,7 +84,7 @@
   border: none;
   text-transform: inherit;
   background: transparent;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--time-animation) ease;
   cursor: pointer;
   appearance: none;
 }
@@ -94,7 +94,7 @@
   position: absolute;
   display: block;
   background-color: var(--color-accent);
-  transition: transform 0.3s ease;
+  transition: transform var(--time-animation) ease;
   transform: scaleX(0);
   transform-origin: top left;
   block-size: 2px;
@@ -254,7 +254,7 @@
   place-items: center;
   border: 2px solid transparent;
   background: transparent;
-  transition: border 0.3s ease;
+  transition: border var(--time-animation) ease;
   cursor: pointer;
   min-inline-size: 38px;
   block-size: 38px;
@@ -272,50 +272,50 @@
 /* анимация заливки иконки по дефолту */
 .like-icon .core {
   fill: var(--color-bg);
-  transition: fill 0.3s 0.03s ease;
+  transition: fill var(--time-animation) 0.03s ease;
 }
 
 .like-icon .main-body {
   fill: var(--color-bg);
-  transition: fill 0.3s ease;
+  transition: fill var(--time-animation) ease;
 }
 
 /* анимация заливки иконки при hover */
 .like-icon:hover .core {
   fill: var(--color-accent);
-  transition: fill 0.3s ease;
+  transition: fill var(--time-animation) ease;
 }
 
 .like-icon:hover .main-body {
   fill: var(--color-accent);
-  transition: fill 0.3s 0.05s ease;
+  transition: fill var(--time-animation) 0.05s ease;
 }
 
 /* анимация заливки иконки при active */
 .like-icon:active .core {
   fill: var(--color-heart-fill);
-  transition: fill 0.3s ease;
+  transition: fill var(--time-animation) ease;
 }
 
 .like-icon:active .main-body {
   fill: var(--color-heart-fill);
-  transition: fill 0.3s 0.05s ease;
+  transition: fill var(--time-animation) 0.05s ease;
 }
 
 /* анимация лайка иконки */
 .like-icon.is-liked .core {
   fill: var(--color-heart-fill);
-  transition: fill 0.3s ease;
+  transition: fill var(--time-animation) ease;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--color-heart-fill);
-  transition: fill 0.3s 0.05s ease;
+  transition: fill var(--time-animation) 0.05s ease;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--color-heart-fill);
-  transition: fill 0.3s 0.06s ease;
+  transition: fill var(--time-animation) 0.06s ease;
 }
 
 /* анимация дефолтного состояния контура */
@@ -334,7 +334,7 @@
   position: relative;
   border: 2px solid var(--color-accent);
   background-color: var(--color-bg);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow var(--time-animation) ease;
   cursor: pointer;
 }
 
@@ -343,7 +343,7 @@
   position: absolute;
   display: block;
   background-color: var(--color-accent);
-  transition: transform 0.5s ease-in-out;
+  transition: transform var(--time-long) ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
   block-size: 100%;
@@ -359,7 +359,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 currentColor;
+  box-shadow: 2px 2px 0 var(--color-accent);
 }
 
 /* Кнопка лайкнуть */
@@ -439,7 +439,7 @@
   border: 2px solid var(--color-accent);
   padding-inline: 30px;
   padding-block: 30px;
-  overflow: hidden;
+  overflow: auto;
   background-color: var(--color-bg);
   inline-size: 353px;
 }

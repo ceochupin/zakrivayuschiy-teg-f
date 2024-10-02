@@ -15,7 +15,7 @@
 
 /* анимация стрелки пункта меню */
 .theme-menu__button:disabled::before {
-  animation: arrow 0.5s ease-in-out infinite alternate;
+  animation: arrow var(--time-long) ease-in-out infinite alternate;
 }
 
 @keyframes arrow {
@@ -30,7 +30,7 @@
 
 /* анимация увеличения сердца */
 .like-icon.is-liked .heart {
-  animation: heart 0.15s ease-in 0.1s 2 alternate;
+  animation: heart var(--time-animation) ease-in 0.1s 2 alternate;
 }
 
 @keyframes heart {
@@ -49,7 +49,7 @@
 
 /* анимация появления искр */
 .like-icon.is-liked .sparks {
-  animation: sparks 0.15s ease-in 0.3s 2 alternate;
+  animation: sparks var(--time-animation) ease-in var(--time-animation) 2 alternate;
 }
 
 @keyframes sparks {
