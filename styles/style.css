@@ -383,11 +383,11 @@
 /* кнопка сохранения после карточек */
 .content__save-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  padding-block: 15px;
   padding-inline: 19px;
+  padding-block: 15px;
 }
 
 @media (width <= 375px) {
@@ -399,9 +399,9 @@
 /* стили для иконки в виде дискеты */
 .floppy-icon {
   z-index: 1;
+  flex-shrink: 0;
   color: var(--color-button-text);
   mix-blend-mode: difference;
-  flex-shrink: 0;
 }
 
 .content__floppy-icon {
@@ -415,7 +415,7 @@
 }
 
 .dialog__floppy-icon {
-  block-size: 39px
+  block-size: 39px;
 }
 
 /* кнопка в диалоговом окне */
