@@ -403,7 +403,6 @@
 .floppy-icon {
   z-index: 1;
   display: block;
-  flex-shrink: 0;
   color: var(--color-button-text);
   mix-blend-mode: difference;
 }
@@ -423,6 +422,7 @@
 .dialog__floppy-icon {
   block-size: 39px;
   inline-size: 39px;
+  flex-shrink: 0;
 }
 
 /* кнопка в диалоговом окне */
