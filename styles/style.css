@@ -388,7 +388,6 @@
   gap: 8px;
   padding-block: 15px;
   padding-inline: 19px;
-  /* inline-size: clamp(19.125rem, 17.0337rem + 8.9231vw, 20.9375rem); */
 }
 
 @media (width <= 375px) {
@@ -400,27 +399,23 @@
 /* стили для иконки в виде дискеты */
 .floppy-icon {
   z-index: 1;
-  display: inline-block;
   color: var(--color-button-text);
   mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
 .content__floppy-icon {
   block-size: 21px;
-  inline-size: 21px;
 }
 
 @media (width <= 375px) {
   .content__floppy-icon {
     block-size: 28px;
-    inline-size: 28px;
   }
 }
 
 .dialog__floppy-icon {
-  block-size: 39px;
-  inline-size: 39px;
-  flex-shrink: 0;
+  block-size: 39px
 }
 
 /* кнопка в диалоговом окне */
