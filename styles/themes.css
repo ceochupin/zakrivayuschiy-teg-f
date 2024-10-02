@@ -11,8 +11,8 @@
   --font-accent: 'PressStart2P';
 
   /* #ВЕС ШРИФТА */
-  --font-w-title: 700;
-  --font-w-text: 400;
+  --font-w-normal: 400;
+  --font-w-bold: 700;
 
   /* #ЦВЕТ */
   /* основные */
@@ -30,7 +30,7 @@
   --gr-solid-end: oklch(21.78% 0 0);
 
   /* паттерн фонового градиента */
-  --bg-image: 
+  --image-bg: 
     repeating-linear-gradient(
       to right,
       var(--gr-line-first) 0 2px,
@@ -54,8 +54,8 @@
   --font-accent: 'PressStart2P';
 
   /* #ВЕС ШРИФТА */
-  --font-w-title: 785;
-  --font-w-text: 465;
+  --font-w-normal: 465;
+  --font-w-bold: 785;
 
   /* #ЦВЕТ */
   /* основные */
@@ -73,7 +73,7 @@
   --gr-solid-end: oklch(33.23% 0.109 143.69);
 
   /* паттерн фонового градиента */
-  --bg-image: 
+  --image-bg: 
     repeating-linear-gradient(
       to right,
       var(--gr-line-first) 0 2px,
@@ -98,8 +98,8 @@
     --font-accent: 'PressStart2P';
 
     /* #ВЕС ШРИФТА */
-    --font-w-title: 785;
-    --font-w-text: 465;
+    --font-w-normal: 465;
+    --font-w-bold: 785;
 
     /* #ЦВЕТ */
     /* основные */
@@ -117,7 +117,7 @@
     --gr-solid-end: oklch(33.23% 0.109 143.69);
 
     /* паттерн фонового градиента */
-    --bg-image: 
+    --image-bg: 
       repeating-linear-gradient(
         to right,
         var(--gr-line-first) 0 2px,

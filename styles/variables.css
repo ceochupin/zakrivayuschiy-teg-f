@@ -1,12 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+
+  --content-inline-size: min(100%, 700px);
+
+
   /* #ШРИФТОВОЕ СЕМЕЙСТВО */
   --font-main: 'Inter-Variable';
   --font-accent: 'PressStart2P';
 
   /* #ВЕС ШРИФТА */
-  --font-w-title: 700;
-  --font-w-text: 400;
+  --font-w-normal: 400;
+  --font-w-bold: 700;
 
   /* #ЦВЕТ */
   /* основные */
@@ -24,7 +28,7 @@
   --gr-solid-end: oklch(21.78% 0 0);
 
   /* паттерн фонового градиента */
-  --bg-image: 
+  --image-bg: 
     repeating-linear-gradient(
       to right,
       var(--gr-line-first) 0 2px,

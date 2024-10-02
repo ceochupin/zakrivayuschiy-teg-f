@@ -15,55 +15,60 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  max-inline-size: 700px;
-  min-block-size: 100dvb;
+  display: grid;
+  justify-items: center;
+  color: var(--color-accent);
   font-family: var(--font-main, sans-serif);
   font-size: 18px;
-  line-height: calc(21 / 18);
-  margin: 0 auto;
   background-color: var(--color-bg);
-  background-image: var(--bg-image);
+  background-image: var(--image-bg);
   background-size: cover;
   background-attachment: fixed;
-  color: var(--color-accent);
-  font-variation-settings: 'wght' var(--font-w-text);
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--font-w-normal);
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  gap: 25px;
-  padding-block: 25px;
+  display: grid;
+  justify-items: center;
   margin-block: 100px;
-  min-block-size: 327px;
-  background-color: inherit;
   border: 2px solid currentColor;
+  padding-block-start: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  padding-block-end: 25px;
+
+  /* общие шрифтовые стили хэдера */
+  font-family: var(--font-accent);
+  font-size: 14px;
+  text-transform: uppercase;
+
+  background-color: inherit;
+  inline-size: var(--content-inline-size);
+}
+
+.header__logo {
+  margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__logo:focus {
+  outline: none;
+}
+
+.header__logo:focus-visible {
+  outline: 2px solid currentColor;
 }
 
 .header__title {
-  text-align: center;
-  font-family: var(--font-accent);
-  font-size: 14px;
-  line-height: 1;
-  font-weight: var(--font-w-text);
-  text-transform: uppercase;
-}
-
-.header__title-accent {
-  font-size: 49px;
-  display: block;
-  margin-block-end: 20px;
+  margin-block-end: 25px;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
 .theme-menu__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 14px;
-  margin: 0 0 0 20px;
-  text-align: left;
+  margin-inline-start: 19px;
 }
 
 .theme-menu__item {
@@ -71,23 +76,17 @@
 }
 
 .theme-menu__button {
-  border: none;
-  color: inherit;
-  text-transform: uppercase;
-  background: transparent;
-  cursor: pointer;
-  font-family: var(--font-accent);
-  font-size: 14px;
-  line-height: 1;
-  font-weight: var(--font-w-text);
-  text-transform: uppercase;
-  appearance: none;
-  transition: opacity 0.3s ease;
   position: relative;
+  border: none;
+  text-transform: inherit;
+  background: transparent;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  appearance: none;
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   background-color: var(--color-accent);
@@ -118,19 +117,30 @@
 }
 
 .theme-menu__button:disabled {
-  opacity: 0.6;
   position: relative;
+  opacity: 0.6;
   pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   inset-inline-start: -20px;
 }
 
-/* карточка */
+.content {
+  inline-size: var(--content-inline-size);
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+}
 
+.content__cards {
+  display: grid;
+  gap: 50px;
+}
+
+/* карточка */
 .card {
   border-inline: 2px solid currentColor;
   border-block-end: 2px solid currentColor;
@@ -140,12 +150,11 @@
 .card__title {
   border-block-start: 2px solid currentColor;
   padding-inline: 10px;
-  padding-block: 4px;
+  padding-block-start: 5px;
+  padding-block-end: 4px;
   font-size: inherit;
-  font-variation-settings:
-    'wght' var(--font-w-title),
-    'wdth' inherit,
-    'opsz' inherit;
+  line-height: 1.21;
+  font-variation-settings: "wght" var(--font-w-bold);
 }
 
 .card__image-container {
@@ -155,13 +164,29 @@
 
 .card__tag {
   position: absolute;
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -1px 0 var(--color-bg),
+    1px 0 var(--color-bg),
+    0 1px var(--color-bg),
+    0 -1px var(--color-bg);
 
   /* динамическое выравнивание тэга от мобилки к десктопу */
   inset-inline-end: clamp(13px, -0.8464px + 3.6923vw, 25px);
 
   inset-block-start: 25px;
-  font-family: var(--font-accent, sans-serif);
-  font-size: 14px;
+}
+
+@supports (text-stroke: 1px var(--color-bg)) or (-webkit-text-stroke: 1px var(--color-bg)) {
+  .card__tag {
+    -webkit-text-stroke: 1px var(--color-bg);
+    text-stroke: 1px var(--color-bg);
+    text-shadow: none;
+  }
 }
 
 .card__image {
@@ -175,8 +200,8 @@
 .card__body {
   display: grid;
   gap: 25px;
-  padding: 25px;
   border-block-start: 2px solid currentColor;
+  padding: 25px;
 }
 
 .card__text-container {
@@ -184,26 +209,23 @@
   gap: 27px;
 }
 
-.card__text {}
-
 .card__button-container {
   display: flex;
   justify-content: end;
-  align-content: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 /* кнопка с иконкой */
 .card__icon-button {
   display: grid;
   place-items: center;
-  min-inline-size: 38px;
-  block-size: 38px;
   border: 2px solid transparent;
   background: transparent;
-  cursor: pointer;
-  appearance: none;
   transition: border 0.3s ease;
+  cursor: pointer;
+  min-inline-size: 38px;
+  block-size: 38px;
+  appearance: none;
 }
 
 .card__icon-button:focus {
@@ -212,6 +234,10 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid currentColor;
+}
+
+.like-icon {
+  padding-block-start: 1px;
 }
 
 /* анимация заливки иконки по дефолту */
@@ -274,20 +300,17 @@
   opacity: 0;
 }
 
-.card__like-button {
+/* общие стили кнопки */
+.button {
   position: relative;
-  display: grid;
-  place-items: center;
-  min-inline-size: 130px;
-  block-size: 38px;
   border: 2px solid currentColor;
-  background-color: transparent;
+  background-color: var(--color-bg);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.card__like-button::after {
-  content: '';
+.button::after {
+  content: "";
   position: absolute;
   display: block;
   background-color: var(--color-accent);
@@ -296,30 +319,65 @@
   transform-origin: left;
   block-size: 100%;
   inline-size: 100%;
-  inset-block-end: 0;
-  inset-inline-start: 0;
 }
 
-.card__like-button:hover::after {
+.button:hover::after {
   transform: scaleX(1);
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 currentColor;
 }
 
+/* Кнопка лайкнуть */
+.card__like-button {
+  display: grid;
+  place-items: center;
+  min-inline-size: 130px;
+  block-size: 38px;
+}
+
 .button__text {
-  position: absolute;
+  z-index: 1;
+  color: var(--color-button-text);
   font-family: var(--font-accent);
   font-size: 14px;
-  line-height: 0.9;
-  font-weight: inherit;
-  text-transform: uppercase;
+  text-wrap: nowrap;
+  mix-blend-mode: difference;
+  padding-block-start: 2px;
+}
+
+.content__save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  inline-size: 335px;
+  padding-block: 15px;
+}
+
+.floppy-icon {
+  block-size: 21px;
+  inline-size: 21px;
   mix-blend-mode: difference;
   color: var(--color-button-text);
   z-index: 1;
+}
+
+@media (width <= 375px) {
+  .content__save-button {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    inline-size: 306px;
+  }
+}
+
+.footer {
+  min-block-size: 100px;
 }
