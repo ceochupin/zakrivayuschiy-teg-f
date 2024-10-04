@@ -76,7 +76,13 @@
 .theme-menu__list {
   display: grid;
   gap: 14px;
-  margin-inline-start: 20px;
+  margin-inline-start: 18px;
+}
+
+@media (width <= 375) {
+  .theme-menu__list {
+    margin-inline-start: 20px;
+  }
 }
 
 .theme-menu__item {
@@ -263,7 +269,7 @@
 .card__button-container {
   display: flex;
   justify-content: end;
-  gap: 4px;
+  gap: 6px;
 }
 
 /* кнопка с иконкой */
@@ -274,9 +280,10 @@
   background: transparent;
   transition: border var(--time-animation, 0.3s) ease;
   cursor: pointer;
-  min-inline-size: 38px;
+  inline-size: 38px;
   block-size: 38px;
   appearance: none;
+  position: relative;
 }
 
 .card__icon-button:focus {
@@ -285,6 +292,22 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid currentColor;
+}
+
+.like-icon {
+  position: absolute;
+  display: block;
+  inset-inline-end: -2px;
+  inset-block-end: -3px;
+}
+
+@media (width <= 375px) {
+  .like-icon {
+    position: absolute;
+    display: block;
+    inset-inline-end: -2px;
+    inset-block-end: -2px;
+  }
 }
 
 /* анимация заливки иконки по дефолту */
@@ -386,7 +409,7 @@
   place-items: center;
   min-inline-size: 130px;
   block-size: 38px;
-  padding-block-start: 3px;
+  padding-block-start: 2px;
 }
 
 /* стили для текста в кнопке */
@@ -408,6 +431,7 @@
   padding-block: 15px;
   inline-size: 100%;
   max-inline-size: 339px;
+  padding-inline-end: 1px;
 }
 
 @media (width <= 375px) {
