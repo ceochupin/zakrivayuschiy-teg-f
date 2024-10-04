@@ -168,12 +168,13 @@
 \*------------------------------------*/
 
 .card {
-  background-color: var(--color-bg, oklch(100% 0 102.07));
   border-inline: 2px solid currentColor;
   border-block: 2px solid currentColor;
+  background-color: var(--color-bg, oklch(100% 0 102.07));
 }
 
 .card__title {
+  border-block-end: 2px solid currentColor;
   padding-inline: 10px;
   padding-block-start: 5px;
   padding-block-end: 3px;
@@ -181,7 +182,6 @@
   line-height: 1.21;
   font-variation-settings: "wght" var(--font-w-bold, 700);
   min-block-size: 33px;
-  border-block-end: 2px solid currentColor;
 }
 
 .card__image-container {
@@ -195,12 +195,14 @@
   opacity: 0.5;
   font-family: var(--font-accent, sans-serif);
   font-size: 14px;
-  text-shadow: -1px 0 var(--color-bg, oklch(100% 0 102.07)), 1px 0 var(--color-bg, oklch(100% 0 102.07)),
-    0 1px var(--color-bg, oklch(100% 0 102.07)), 0 -1px var(--color-bg, oklch(100% 0 102.07));
+  text-shadow: -1px 0 var(--color-bg, oklch(100% 0 102.07)),
+    1px 0 var(--color-bg, oklch(100% 0 102.07)),
+    0 1px var(--color-bg, oklch(100% 0 102.07)),
+    0 -1px var(--color-bg, oklch(100% 0 102.07));
   mix-blend-mode: light;
 
   /* динамическое выравнивание тэга от мобилки к десктопу */
-  inset-inline-end: clamp(11px, -0.3221rem + 4.3077vw, 25px);;
+  inset-inline-end: clamp(11px, -0.3221rem + 4.3077vw, 25px);
 
   inset-block-start: clamp(23px, 1.2933rem + 0.6154vw, 25px);
 }
@@ -274,6 +276,7 @@
 
 /* кнопка с иконкой */
 .card__icon-button {
+  position: relative;
   display: grid;
   place-items: center;
   border: 2px solid transparent;
@@ -283,7 +286,6 @@
   inline-size: 38px;
   block-size: 38px;
   appearance: none;
-  position: relative;
 }
 
 .card__icon-button:focus {
@@ -407,9 +409,9 @@
 .card__like-button {
   display: grid;
   place-items: center;
+  padding-block-start: 2px;
   min-inline-size: 130px;
   block-size: 38px;
-  padding-block-start: 2px;
 }
 
 /* стили для текста в кнопке */
@@ -428,10 +430,10 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  padding-inline-end: 1px;
   padding-block: 15px;
   inline-size: 100%;
   max-inline-size: 339px;
-  padding-inline-end: 1px;
 }
 
 @media (width <= 375px) {
@@ -459,7 +461,10 @@
   }
 }
 
-/* диалоговое окно */
+/*------------------------------------*\
+  #ДИАЛОГОВОЕ ОКНО
+\*------------------------------------*/
+
 .dialog[open] {
   display: grid;
   gap: 30px;
@@ -509,4 +514,3 @@
   block-size: 38px;
   inline-size: 100%;
 }
-

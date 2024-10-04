@@ -35,21 +35,22 @@
 
 @keyframes heart {
   from {
+    transform-origin: center;
     /* transform: scale(1); */
     scale: 1;
-    transform-origin: center;
   }
 
   to {
+    transform-origin: center;
     /* transform: scale(1.5); */
     scale: 1.5;
-    transform-origin: center;
   }
 }
 
 /* анимация появления искр */
 .like-icon.is-liked .sparks {
-  animation: sparks var(--time-animation) ease-in var(--time-animation) 2 alternate;
+  animation: sparks var(--time-animation) ease-in var(--time-animation) 2
+    alternate;
 }
 
 @keyframes sparks {
