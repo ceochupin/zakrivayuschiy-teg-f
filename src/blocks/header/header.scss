@@ -1,0 +1,31 @@
+.header {
+  display: grid;
+  justify-items: center;
+  margin-block: 100px;
+  border: 2px solid currentcolor;
+  padding-block: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 24px;
+  font-family: var(--font-accent, sans-serif);
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: inherit;
+  inline-size: var(--content-inline-size, min(100%, 700px));
+
+  &__logo {
+    margin-block-end: 20px;
+    font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentcolor;
+    }
+  }
+
+  &__title {
+    margin-block-end: 26px;
+    font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  }
+}

@@ -1,0 +1,125 @@
+.card {
+  border-inline: 2px solid currentcolor;
+  border-block: 2px solid currentcolor;
+  background-color: var(--color-bg, oklch(100% 0 102.07deg));
+
+  &__title {
+    border-block-end: 2px solid currentcolor;
+    padding-inline: 10px;
+    padding-block: 5px 3px;
+    font-size: inherit;
+    line-height: 1.21;
+    font-variation-settings: 'wght' var(--font-w-bold, 700);
+    min-block-size: 33px;
+  }
+
+  &__image-container {
+    position: relative;
+    border-block-end: 2px solid currentcolor;
+  }
+
+  &__tag {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    font-family: var(--font-accent, sans-serif);
+    font-size: 14px;
+    text-shadow:
+      -1px 0 var(--color-bg, oklch(100% 0 102.07deg)),
+      1px 0 var(--color-bg, oklch(100% 0 102.07deg)),
+      0 1px var(--color-bg, oklch(100% 0 102.07deg)),
+      0 -1px var(--color-bg, oklch(100% 0 102.07deg));
+    mix-blend-mode: light;
+  
+    /* динамическое выравнивание тэга от мобилки к десктопу */
+    inset-inline-end: clamp(11px, -0.3221rem + 4.3077vw, 25px);
+    inset-block-start: clamp(23px, 1.2933rem + 0.6154vw, 25px);
+
+    @supports (text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) or (-webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) {
+      text-shadow: none;
+      -webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07deg));
+    }
+  }
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    aspect-ratio: 1/1;
+
+    &--brightness {
+      filter: brightness(200%);
+    }
+    
+    &--contrast {
+      filter: contrast(60%);
+    }
+    
+    &--opacity {
+      filter: opacity(0.7);
+    }
+    
+    &--grayscale {
+      filter: grayscale(0.7);
+    }
+    
+    &--saturate {
+      filter: saturate(150%);
+    }
+    
+    &--hue-rotate {
+      filter: hue-rotate(120deg);
+    }
+    
+    &--multi-filter {
+      filter: sepia(70%) invert(65%) contrast(60%);
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: 25px;
+    padding: 25px;
+  }
+  
+  &__text-container {
+    display: grid;
+    gap: 27px;
+  }
+  
+  &__button-container {
+    display: flex;
+    justify-content: end;
+    gap: 6px;
+  }
+
+  &__icon-button {
+    position: relative;
+    display: grid;
+    place-items: center;
+    border: 2px solid transparent;
+    background: transparent;
+    transition: border var(--time-animation, 0.3s) ease;
+    cursor: pointer;
+    inline-size: 38px;
+    block-size: 38px;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+    
+    &:focus-visible {
+      border: 2px solid currentcolor;
+    }
+  }
+
+  &__like-button {
+    display: grid;
+    place-items: center;
+    padding-block-start: 2px;
+    min-inline-size: 130px;
+    block-size: 38px;
+  }
+}

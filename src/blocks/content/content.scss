@@ -1,0 +1,36 @@
+.content {
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+  padding-block-end: 100px;
+  inline-size: var(--content-inline-size, min(100%, 700px));
+
+  &__cards {
+    display: grid;
+    gap: 50px;
+  }
+
+  &__save-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-inline-end: 1px;
+    padding-block: 15px;
+    inline-size: 100%;
+    max-inline-size: 339px;
+
+    @media (width <= 375px) {
+      flex-direction: column;
+      max-inline-size: 310px;
+    }
+  }
+
+  &__floppy-icon {
+    block-size: 21px;
+
+    @media (width <= 375px) {
+      block-size: 28px;
+    }
+  }
+}

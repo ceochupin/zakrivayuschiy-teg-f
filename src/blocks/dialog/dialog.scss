@@ -1,0 +1,52 @@
+.dialog {
+  &[open] {
+    display: grid;
+    gap: 30px;
+    border: 2px solid var(--color-accent, oklch(0% 0 0deg));
+    padding-inline: 30px;
+    padding-block: 30px;
+    overflow: hidden;
+    background-color: var(--color-bg, oklch(100% 0 102.07deg));
+    inline-size: 100%;
+    max-inline-size: 357px;
+
+    @media (width <= 375px) {
+      padding-inline: 40px;
+      max-inline-size: 341px;
+    }
+  }
+
+  &::backdrop {
+    opacity: 75%;
+    background-color: var(--color-backdrop, oklch(0% 0 0deg));
+  }
+
+  &__message {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__floppy-icon {
+    block-size: 39px;
+  }
+
+  &__text {
+    color: var(--color-accent, oklch(0% 0 0deg));
+    font-family: var(--font-accent, sans-serif);
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    display: grid;
+    place-items: center;
+    block-size: 38px;
+    inline-size: 100%;
+
+    &:has(.button__text) {
+      text-transform: uppercase;
+    }
+  }
+}

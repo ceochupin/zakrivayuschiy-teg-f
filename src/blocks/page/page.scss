@@ -1,0 +1,14 @@
+.page {
+  display: grid;
+  justify-items: center;
+  color: var(--color-accent, oklch(0% 0 0deg));
+  font-family: var(--font-main, sans-serif);
+  font-size: 18px;
+  background-color: var(--color-bg, oklch(100% 0 102.07deg));
+  background-image: var(--image-bg);
+  background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: 'wght' var(--font-w-normal, 400);
+}

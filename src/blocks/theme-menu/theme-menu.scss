@@ -1,0 +1,79 @@
+.theme-menu {
+  &__list {
+    display: grid;
+    gap: 14px;
+    margin-inline-start: 18px;
+
+    @media (width <= 375) {
+      margin-inline-start: 20px;
+    }
+  }
+
+  &__item {
+    line-height: 0;
+  }
+
+  &__button {
+    position: relative;
+    border: none;
+    text-transform: inherit;
+    background: transparent;
+    transition: opacity var(--time-animation, 0.3s) ease;
+    cursor: pointer;
+    appearance: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: var(--color-accent, oklch(0% 0 0deg));
+      transition: transform var(--time-animation, 0.3s) ease;
+      transform: scaleX(0);
+      transform-origin: top left;
+      block-size: 2px;
+      inline-size: 100%;
+      inset-block-end: -3px;
+      inset-inline-start: 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      opacity: 0.6;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &:disabled {
+      position: relative;
+      opacity: 0.6;
+      pointer-events: none;
+
+      &::before {
+        content: '▶';
+        position: absolute;
+        inset-inline-start: -20px;
+        animation: arrow var(--time-long) ease-in-out infinite alternate;
+
+        @keyframes arrow {
+          from {
+            inset-inline-start: -20px;
+          }
+        
+          to {
+            inset-inline-start: -16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.like-icon {
+  position: absolute;
+  display: block;
+  inset-inline-end: -2px;
+  inset-block-end: -3px;
+
+  @media (width <= 375px) {
+    inset-inline-end: -2px;
+    inset-block-end: -2px;
+  }
+
+  &:hover {
+    .like-icon__core {
+      fill: var(--color-accent, oklch(0% 0 0deg));
+      transition: fill var(--time-animation, 0.3s) ease;
+    }
+    
+    .like-icon__main-body {
+      fill: var(--color-accent, oklch(0% 0 0deg));
+      transition: fill var(--time-animation, 0.3s) 0.05s ease;
+    }
+  }
+
+  &:active {
+    .like-icon__core {
+      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+      transition: fill var(--time-animation, 0.3s) ease;
+    }
+    
+    .like-icon__main-body {
+      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+      transition: fill var(--time-animation, 0.3s) 0.05s ease;
+    }
+  }
+
+  &__core {
+    fill: var(--color-bg, oklch(100% 0 102.07deg));
+    transition: fill var(--time-animation, 0.3s) 0.03s ease;
+  }
+
+  &__main-body {
+    fill: var(--color-bg, oklch(100% 0 102.07deg));
+    transition: fill var(--time-animation, 0.3s) ease;
+  }
+
+  &.is-liked {
+    .like-icon__core {
+      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+      transition: fill var(--time-animation, 0.3s) ease;
+    }
+    
+    .like-icon__main-body {
+      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+      transition: fill var(--time-animation, 0.3s) 0.05s ease;
+    }
+    
+    .like-icon__contour {
+      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+      transition: fill var(--time-animation, 0.3s) 0.06s ease;
+    }
+
+    .like-icon__heart {
+      animation: heart var(--time-animation) ease-in 0.1s 2 alternate;
+
+      @keyframes heart {
+        from {
+          transform-origin: center;
+          scale: 1;
+        }
+      
+        to {
+          transform-origin: center;
+          scale: 1.5;
+        }
+      }
+    }
+
+    .like-icon__sparks {
+      animation: sparks var(--time-animation) ease-in var(--time-animation) 2 alternate;
+
+      @keyframes sparks {
+        from {
+          opacity: 0;
+        }
+      
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  &__contour {
+    fill: var(--color-accent, oklch(0% 0 0deg));
+    transition: fill 0.1s linear;
+  }
+  
+  &__sparks {
+    opacity: 0;
+  }
+}
