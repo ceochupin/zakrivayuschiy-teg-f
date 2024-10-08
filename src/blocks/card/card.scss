@@ -30,12 +30,13 @@
       0 1px var(--color-bg, oklch(100% 0 102.07deg)),
       0 -1px var(--color-bg, oklch(100% 0 102.07deg));
     mix-blend-mode: light;
-  
+
     /* динамическое выравнивание тэга от мобилки к десктопу */
     inset-inline-end: clamp(11px, -0.3221rem + 4.3077vw, 25px);
     inset-block-start: clamp(23px, 1.2933rem + 0.6154vw, 25px);
 
-    @supports (text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) or (-webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) {
+    @supports (text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) or
+      (-webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) {
       text-shadow: none;
       -webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07deg));
     }
@@ -51,27 +52,27 @@
     &--brightness {
       filter: brightness(200%);
     }
-    
+
     &--contrast {
       filter: contrast(60%);
     }
-    
+
     &--opacity {
       filter: opacity(0.7);
     }
-    
+
     &--grayscale {
       filter: grayscale(0.7);
     }
-    
+
     &--saturate {
       filter: saturate(150%);
     }
-    
+
     &--hue-rotate {
       filter: hue-rotate(120deg);
     }
-    
+
     &--multi-filter {
       filter: sepia(70%) invert(65%) contrast(60%);
     }
@@ -82,12 +83,12 @@
     gap: 25px;
     padding: 25px;
   }
-  
+
   &__text-container {
     display: grid;
     gap: 27px;
   }
-  
+
   &__button-container {
     display: flex;
     justify-content: end;
@@ -109,7 +110,7 @@
     &:focus {
       outline: none;
     }
-    
+
     &:focus-visible {
       border: 2px solid currentcolor;
     }

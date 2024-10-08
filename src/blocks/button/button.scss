@@ -16,17 +16,17 @@
     block-size: 100%;
     inline-size: 100%;
   }
-  
+
   &:hover {
     &::after {
       transform: scaleX(1);
     }
   }
-  
+
   &:focus {
     outline: none;
   }
-  
+
   &:focus-visible {
     box-shadow: 2px 2px 0 var(--color-accent, oklch(0% 0 0deg));
   }

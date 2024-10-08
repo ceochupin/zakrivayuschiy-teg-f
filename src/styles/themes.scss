@@ -11,17 +11,17 @@
   --font-w-bold: 700;
 
   /* основные цвета */
-  --color-bg: oklch(100% 0 102.07);
-  --color-accent: oklch(0% 0 0);
+  --color-bg: oklch(100% 0 102.07deg);
+  --color-accent: oklch(0% 0 0deg);
   --color-button-text: var(--color-bg);
 
   /* цвет линний градиента */
-  --gr-line-first: oklch(86.69% 0 0);
-  --gr-line-second: oklch(86.69% 0 0 / 0%);
+  --gr-line-first: oklch(86.69% 0 0deg);
+  --gr-line-second: oklch(86.69% 0 0deg / 0%);
 
   /* цвет сплошного градиента */
-  --gr-solid-start: oklch(92.8% 0 0);
-  --gr-solid-end: oklch(21.78% 0 0);
+  --gr-solid-start: oklch(92.8% 0 0deg);
+  --gr-solid-end: oklch(21.78% 0 0deg);
 
   /* паттерн фонового градиента */
   --image-bg: repeating-linear-gradient(
@@ -29,11 +29,7 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gr-line-first) 0 2px,
-      var(--gr-line-second) 2px 4px
-    ),
+    repeating-linear-gradient(to bottom, var(--gr-line-first) 0 2px, var(--gr-line-second) 2px 4px),
     linear-gradient(to bottom, var(--gr-solid-start) 0.01%, var(--gr-solid-end));
 }
 
@@ -43,17 +39,17 @@
   --font-w-bold: 785;
 
   /* основные цвета */
-  --color-bg: oklch(0% 0 0);
-  --color-accent: oklch(73.27% 0.246 142.92);
+  --color-bg: oklch(0% 0 0deg);
+  --color-accent: oklch(73.27% 0.246 142.92deg);
   --color-button-text: var(--color-accent);
 
   /* цвет линний градиента */
-  --gr-line-first: oklch(0% 0 0);
-  --gr-line-second: oklch(0% 0 0 / 0%);
+  --gr-line-first: oklch(0% 0 0deg);
+  --gr-line-second: oklch(0% 0 0deg / 0%);
 
   /* цвет сплошного градиента */
-  --gr-solid-start: oklch(51.72% 0.172 143.13);
-  --gr-solid-end: oklch(33.23% 0.109 143.69);
+  --gr-solid-start: oklch(51.72% 0.172 143.13deg);
+  --gr-solid-end: oklch(33.23% 0.109 143.69deg);
 
   /* паттерн фонового градиента */
   --image-bg: repeating-linear-gradient(
@@ -61,11 +57,7 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gr-line-first) 0 2px,
-      var(--gr-line-second) 2px 4px
-    ),
+    repeating-linear-gradient(to bottom, var(--gr-line-first) 0 2px, var(--gr-line-second) 2px 4px),
     linear-gradient(to bottom, var(--gr-solid-start), var(--gr-solid-end));
 }
 
@@ -76,17 +68,17 @@
     --font-w-bold: 785;
 
     /* основные цвета */
-    --color-bg: oklch(0% 0 0);
-    --color-accent: oklch(73.27% 0.246 142.92);
+    --color-bg: oklch(0% 0 0deg);
+    --color-accent: oklch(73.27% 0.246 142.92deg);
     --color-button-text: var(--color-accent);
 
     /* цвет линний градиента */
-    --gr-line-first: oklch(0% 0 0);
-    --gr-line-second: oklch(0% 0 0 / 0%);
+    --gr-line-first: oklch(0% 0 0deg);
+    --gr-line-second: oklch(0% 0 0deg / 0%);
 
     /* цвет сплошного градиента */
-    --gr-solid-start: oklch(51.72% 0.172 143.13);
-    --gr-solid-end: oklch(33.23% 0.109 143.69);
+    --gr-solid-start: oklch(51.72% 0.172 143.13deg);
+    --gr-solid-end: oklch(33.23% 0.109 143.69deg);
 
     /* паттерн фонового градиента */
     --image-bg: repeating-linear-gradient(

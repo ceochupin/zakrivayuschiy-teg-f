@@ -14,7 +14,7 @@
       fill: var(--color-accent, oklch(0% 0 0deg));
       transition: fill var(--time-animation, 0.3s) ease;
     }
-    
+
     .like-icon__main-body {
       fill: var(--color-accent, oklch(0% 0 0deg));
       transition: fill var(--time-animation, 0.3s) 0.05s ease;
@@ -26,7 +26,7 @@
       fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
       transition: fill var(--time-animation, 0.3s) ease;
     }
-    
+
     .like-icon__main-body {
       fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
       transition: fill var(--time-animation, 0.3s) 0.05s ease;
@@ -48,12 +48,12 @@
       fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
       transition: fill var(--time-animation, 0.3s) ease;
     }
-    
+
     .like-icon__main-body {
       fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
       transition: fill var(--time-animation, 0.3s) 0.05s ease;
     }
-    
+
     .like-icon__contour {
       fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
       transition: fill var(--time-animation, 0.3s) 0.06s ease;
@@ -67,7 +67,7 @@
           transform-origin: center;
           scale: 1;
         }
-      
+
         to {
           transform-origin: center;
           scale: 1.5;
@@ -82,19 +82,19 @@
         from {
           opacity: 0;
         }
-      
+
         to {
           opacity: 1;
         }
       }
     }
   }
-  
+
   &__contour {
     fill: var(--color-accent, oklch(0% 0 0deg));
     transition: fill 0.1s linear;
   }
-  
+
   &__sparks {
     opacity: 0;
   }

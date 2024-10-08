@@ -1,46 +1,46 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  /*------------------------------------*\
+  /* ------------------------------------*\
     #ОБЩИЕ ПЕРЕМЕННЫЕ
-  \*------------------------------------*/
+  \*------------------------------------ */
 
   /* ширина контейнера */
   --content-inline-size: min(100%, 700px);
 
   /* шрифты проекта */
-  --font-main: "Inter-Variable";
-  --font-accent: "PressStart2P";
+  --font-main: 'Inter-Variable';
+  --font-accent: 'PressStart2P';
 
   /* цвет сердца */
-  --color-heart-fill: oklch(62.8% 0.258 29.24);
+  --color-heart-fill: oklch(62.8% 0.258 29.24deg);
 
   /* цвет фона за модальным окном */
-  --color-backdrop: oklch(0% 0 0);
+  --color-backdrop: oklch(0% 0 0deg);
 
   /* время анимации */
   --time-animation: 0.3s;
   --time-long: 0.5s;
 
-  /*------------------------------------*\
+  /* ------------------------------------*\
     #ПЕРЕМЕННЫЕ ТЕМЫ
-  \*------------------------------------*/
+  \*------------------------------------ */
 
   /* вес шрифта */
   --font-w-normal: 400;
   --font-w-bold: 700;
 
   /* основные цвета */
-  --color-bg: oklch(100% 0 102.07);
-  --color-accent: oklch(0% 0 0);
+  --color-bg: oklch(100% 0 102.07deg);
+  --color-accent: oklch(0% 0 0deg);
   --color-button-text: var(--color-bg);
 
   /* цвет линний градиента */
-  --gr-line-first: oklch(86.69% 0 0);
-  --gr-line-second: oklch(86.69% 0 0 / 0%);
+  --gr-line-first: oklch(86.69% 0 0deg);
+  --gr-line-second: oklch(86.69% 0 0deg / 0%);
 
   /* цвет сплошного градиента */
-  --gr-solid-start: oklch(92.8% 0 0);
-  --gr-solid-end: oklch(21.78% 0 0);
+  --gr-solid-start: oklch(92.8% 0 0deg);
+  --gr-solid-end: oklch(21.78% 0 0deg);
 
   /* паттерн фонового градиента */
   --image-bg: repeating-linear-gradient(
@@ -48,10 +48,6 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gr-line-first) 0 2px,
-      var(--gr-line-second) 2px 4px
-    ),
+    repeating-linear-gradient(to bottom, var(--gr-line-first) 0 2px, var(--gr-line-second) 2px 4px),
     linear-gradient(to bottom, var(--gr-solid-start) 0.01%, var(--gr-solid-end));
 }
