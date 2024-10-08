@@ -5,7 +5,6 @@
   inset-block-end: -3px;
 
   @media (width <= 375px) {
-    inset-inline-end: -2px;
     inset-block-end: -2px;
   }
 
@@ -44,33 +43,35 @@
   }
 
   &.is-liked {
-    .like-icon__core {
-      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
-      transition: fill var(--time-animation, 0.3s) ease;
-    }
+    .like-icon {
+      &__core {
+        fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+        transition: fill var(--time-animation, 0.3s) ease;
+      }
 
-    .like-icon__main-body {
-      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
-      transition: fill var(--time-animation, 0.3s) 0.05s ease;
-    }
+      &__main-body {
+        fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+        transition: fill var(--time-animation, 0.3s) 0.05s ease;
+      }
 
-    .like-icon__contour {
-      fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
-      transition: fill var(--time-animation, 0.3s) 0.06s ease;
-    }
+      &__contour {
+        fill: var(--color-heart-fill, oklch(62.8% 0.258 29.24deg));
+        transition: fill var(--time-animation, 0.3s) 0.06s ease;
+      }
 
-    .like-icon__heart {
-      animation: heart var(--time-animation) ease-in 0.1s 2 alternate;
+      &__heart {
+        animation: heart var(--time-animation) ease-in 0.1s 2 alternate;
 
-      @keyframes heart {
-        from {
-          transform-origin: center;
-          scale: 1;
-        }
+        @keyframes heart {
+          from {
+            transform-origin: center;
+            scale: 1;
+          }
 
-        to {
-          transform-origin: center;
-          scale: 1.5;
+          to {
+            transform-origin: center;
+            scale: 1.5;
+          }
         }
       }
     }
