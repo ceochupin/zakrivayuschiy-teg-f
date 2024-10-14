@@ -22,16 +22,8 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gr-line-first) 0 2px,
-      var(--gr-line-second) 2px 4px
-    ),
-    linear-gradient(
-      to bottom,
-      var(--gr-solid-start) 0.01%,
-      var(--gr-solid-end)
-    );
+    repeating-linear-gradient(to bottom, var(--gr-line-first) 0 2px, var(--gr-line-second) 2px 4px),
+    linear-gradient(to bottom, var(--gr-solid-start) 0.01%, var(--gr-solid-end));
 }
 
 :root.theme-dark {
@@ -58,16 +50,8 @@
       var(--gr-line-first) 0 2px,
       var(--gr-line-second) 2px 4px
     ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--gr-line-first) 0 2px,
-      var(--gr-line-second) 2px 4px
-    ),
-    linear-gradient(
-      to bottom,
-      var(--gr-solid-start),
-      var(--gr-solid-end)
-    );
+    repeating-linear-gradient(to bottom, var(--gr-line-first) 0 2px, var(--gr-line-second) 2px 4px),
+    linear-gradient(to bottom, var(--gr-solid-start), var(--gr-solid-end));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,10 +84,6 @@
         var(--gr-line-first) 0 2px,
         var(--gr-line-second) 2px 4px
       ),
-      linear-gradient(
-        to bottom,
-        var(--gr-solid-start),
-        var(--gr-solid-end)
-      );
+      linear-gradient(to bottom, var(--gr-solid-start), var(--gr-solid-end));
   }
 }
