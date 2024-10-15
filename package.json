@@ -18,7 +18,7 @@
     "deploy": "gh-pages -d dist -f"
   },
   "author": "Vladimir Chupin",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
