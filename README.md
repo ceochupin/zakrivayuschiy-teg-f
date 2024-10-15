@@ -23,6 +23,7 @@
 - JavaScript для интерактивности
 - Webpack в качестве сборщика модулей
 - Методология БЭМ для организации CSS
+- gh-pages для деплоя на GitHub Pages
 
 ## Как запустить проект
 
@@ -62,6 +63,17 @@
 - `npm run check` - комплексная проверка кода
 - `npm run fix` - автоматическое исправление ошибок
 - `npm run prebuild` - подготовка к сборке
+- `npm run predeploy` - подготовка к деплою (запуск сборки)
+- `npm run deploy` - деплой на GitHub Pages
+
+## Деплой на GitHub Pages
+
+Проект настроен для автоматического деплоя на GitHub Pages.
+   ```
+   npm run deploy
+   ```
+
+Эта команда создаст продакшн-сборку проекта и опубликует его на GitHub Pages. После успешного выполнения, проект будет доступен по адресу: [https://ceochupin.github.io/zakrivayuschiy-teg-f](https://ceochupin.github.io/zakrivayuschiy-teg-f)
 
 ## Структура проекта
 
@@ -81,6 +93,7 @@
 ## Полезные ссылки
 
 - [Репозиторий проекта](https://github.com/ceochupin/zakrivayuschiy-teg-f)
+- [Опубликованный проект](https://ceochupin.github.io/zakrivayuschiy-teg-f)
 - [Яндекс Практикум](https://practicum.yandex.ru/)
 
 ## Автор

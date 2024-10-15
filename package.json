@@ -13,7 +13,9 @@
     "format:check": "prettier --check './src/**/*.{html,scss,css,js}'",
     "check": "npm run format:check && npm run lint",
     "fix": "npm run format && npm run lint:fix",
-    "prebuild": "npm run fix"
+    "prebuild": "npm run fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -f"
   },
   "author": "Vladimir Chupin",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
+    "gh-pages": "^6.2.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.1",
@@ -43,5 +46,6 @@
   },
   "browserslist": [
     "last 3 versions"
-  ]
+  ],
+  "homepage": "https://ceochupin.github.io/zakrivayuschiy-teg-f"
 }
