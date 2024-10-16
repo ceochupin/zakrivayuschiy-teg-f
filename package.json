@@ -45,7 +45,7 @@
     "webpack-merge": "^6.0.1"
   },
   "browserslist": [
-    "last 3 versions"
+    "last 10 versions"
   ],
   "homepage": "https://ceochupin.github.io/zakrivayuschiy-teg-f"
 }

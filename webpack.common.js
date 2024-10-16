@@ -9,7 +9,6 @@ module.exports = {
     filename: 'scripts/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: '/zakrivayuschiy-teg-f/',
   },
   module: {
     rules: [

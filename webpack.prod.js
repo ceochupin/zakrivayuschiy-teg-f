@@ -4,6 +4,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
+  output: {
+    publicPath: '/zakrivayuschiy-teg-f/',
+
+  },
   mode: 'production',
   devtool: 'source-map',
   optimization: {
