@@ -1,7 +1,7 @@
 .card {
   border-inline: 2px solid currentcolor;
   border-block: 2px solid currentcolor;
-  background-color: var(--color-bg, oklch(100% 0 102.07deg));
+  background-color: var(--color-bg, rgb(255 255 255));
 
   &__title {
     border-block-end: 2px solid currentcolor;
@@ -25,20 +25,20 @@
     font-family: var(--font-accent, sans-serif);
     font-size: 14px;
     text-shadow:
-      -1px 0 var(--color-bg, oklch(100% 0 102.07deg)),
-      1px 0 var(--color-bg, oklch(100% 0 102.07deg)),
-      0 1px var(--color-bg, oklch(100% 0 102.07deg)),
-      0 -1px var(--color-bg, oklch(100% 0 102.07deg));
+      -1px 0 var(--color-bg, rgb(255 255 255)),
+      1px 0 var(--color-bg, rgb(255 255 255)),
+      0 1px var(--color-bg, rgb(255 255 255)),
+      0 -1px var(--color-bg, rgb(255 255 255));
     mix-blend-mode: light;
 
     /* динамическое выравнивание тэга от мобилки к десктопу */
     inset-inline-end: clamp(11px, -0.3221rem + 4.3077vw, 25px);
     inset-block-start: clamp(23px, 1.2933rem + 0.6154vw, 25px);
 
-    @supports (text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) or
-      (-webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07))) {
+    @supports (text-stroke: 1px var(--color-bg, rgb(255 255 255))) or
+      (-webkit-text-stroke: 1px var(--color-bg, rgb(255 255 255))) {
       text-shadow: none;
-      -webkit-text-stroke: 1px var(--color-bg, oklch(100% 0 102.07deg));
+      -webkit-text-stroke: 1px var(--color-bg, rgb(255 255 255));
     }
   }
 

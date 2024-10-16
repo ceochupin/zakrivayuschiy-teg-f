@@ -26,7 +26,7 @@
       content: '';
       position: absolute;
       display: block;
-      background-color: var(--color-accent, oklch(0% 0 0deg));
+      background-color: var(--color-accent, rgb(0 0 0));
       transition: transform var(--time-animation, 0.3s) ease;
       transform: scaleX(0);
       transform-origin: top left;

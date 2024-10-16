@@ -11,10 +11,10 @@
   --font-accent: 'PressStart2P';
 
   /* цвет сердца */
-  --color-heart-fill: oklch(62.8% 0.258 29.24deg);
+  --color-heart-fill: rgb(255 0 0);
 
   /* цвет фона за модальным окном */
-  --color-backdrop: oklch(0% 0 0deg);
+  --color-backdrop: rgb(0 0 0 / 0.75);
 
   /* время анимации */
   --time-animation: 0.3s;
@@ -29,17 +29,17 @@
   --font-w-bold: 700;
 
   /* основные цвета */
-  --color-bg: oklch(100% 0 102.07deg);
-  --color-accent: oklch(0% 0 0deg);
+  --color-bg: rgb(255 255 255);
+  --color-accent: rgb(0 0 0);
   --color-button-text: var(--color-bg);
 
   /* цвет линний градиента */
-  --gr-line-first: oklch(86.69% 0 0deg);
-  --gr-line-second: oklch(86.69% 0 0deg / 0%);
+  --gr-line-first: rgb(211 211 211);
+  --gr-line-second: rgb(211 211 211 / 0);
 
   /* цвет сплошного градиента */
-  --gr-solid-start: oklch(92.8% 0 0deg);
-  --gr-solid-end: oklch(21.78% 0 0deg);
+  --gr-solid-start: rgb(231 231 231);
+  --gr-solid-end: rgb(26 26 26);
 
   /* паттерн фонового градиента */
   --image-bg: repeating-linear-gradient(

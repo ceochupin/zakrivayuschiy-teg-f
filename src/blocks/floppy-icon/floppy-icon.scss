@@ -1,6 +1,6 @@
 .floppy-icon {
   z-index: 1;
   flex-shrink: 0;
-  color: var(--color-button-text, oklch(100% 0 102.07deg));
+  color: var(--color-button-text, rgb(255 255 255));
   mix-blend-mode: difference;
 }
