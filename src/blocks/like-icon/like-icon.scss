@@ -60,7 +60,7 @@
       }
 
       &__heart {
-        animation: heart var(--time-animation) ease-in 0.1s 2 alternate;
+        animation: heart var(--time-animation) ease-in 0.1s;
 
         @keyframes heart {
           from {
@@ -77,7 +77,7 @@
     }
 
     .like-icon__sparks {
-      animation: sparks var(--time-animation) ease-in var(--time-animation) 2 alternate;
+      animation: sparks var(--time-animation) ease-in 0.2s;
 
       @keyframes sparks {
         from {
