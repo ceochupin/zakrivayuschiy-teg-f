@@ -1,6 +1,7 @@
 .dialog {
   &[open] {
     display: grid;
+    grid-template-rows: min-content min-content;
     gap: 30px;
     border: 2px solid var(--color-accent, rgb(0 0 0));
     padding-inline: 30px;
